@@ -33,7 +33,22 @@
   <link href="custom.css" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker1" ).datepicker();
+  } );
+  </script>
+  <script>
+  $( function() {
+    $( "#datepicker2" ).datepicker();
+  } );
+  </script>
  </head>
 
  <body> 
@@ -86,13 +101,13 @@
 
 
     <div class="row center">
-                <h2>Let employers know a little bit about yourself.</h2>
-                <p class="subtitle">Provide details about your career history.</p>
+                <h2>Do you have relevant work experience?</h2>
+                <p class="subtitle">List your employment history, starting with the most recent position.</p>
                     <!-- progressbar -->
                     <ul id="progressbar">
                         <li class="active" id="account"><strong>Personal Information</strong></li>
                         <li class="active" id="personal"><strong>Summary</strong></li>
-                        <li id="payment"><strong>Work Experience</strong></li>
+                        <li class="active" id="payment"><strong>Work Experience</strong></li>
                         <li id="education"><strong>Education</strong></li>
                         <li id="skills"><strong>Skills</strong></li>
                         <li id="reference"><strong>Reference</strong></li>
@@ -115,28 +130,66 @@
 
 
 
+    <div class="single-field">
+      <div class="function">
+        <div class="function-title">Creative Designer</div>
+        <div class="function-company">Bunisha Limited</div>
+      </div>
+      <div class="edit-button" onclick="editFunction()">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> &nbsp; 
+        Edit
+      </div>
+    </div>
+    <br/>
 
+    <div class="single-field">
+      <div class="function">
+        <div class="function-title">User Interface [UI] Designer</div>
+        <div class="function-company">Bunisha Limited</div>
+      </div>
+      <div class="save-button" onclick="editFunction()">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i> &nbsp; 
+        Save
+      </div>
+    </div>
+    <br/>
 
-   <div class="cv-form">
+   <div class="cv-form form-card">
 
     <div class="form-row">
-      <div class="form-group-single">
-        <label>Professionnal Summary</label>
-        <textarea type="text" name="editor1" rows="10" placeholder="eg: I am a creative and multi-talented designer with  6 years of experience"></textarea>
+      <div class="form-group">
+        <label>Job Title <span class="primary-color">*</span></label>
+        <input type="text" name="" placeholder="eg: Programmer">
       </div>
-
-      <br/>
-
-      <div class="button-group">
-      <a href="start_cv_building.html"><button class="next-button">< &nbsp; BACK</button></a>
-      <a href="work-experience.html">&nbsp;&nbsp; <button class="next-button">NEXT &nbsp; ></button></a>
-    </div>
-    <br/><Br/>
-
+      <div class="form-group2">
+        <label>Employer <span class="primary-color">*</span></label>
+        <input type="text" name="" placeholder="eg: Bunisha Limited">
+      </div>
     </div>
 
+    <div class="form-row">
+      <div class="form-group">
+        <label>Start Date <span class="primary-color">*</span></label>
+        <input type="text" name="" id="datepicker1" placeholder="eg: 20-12-2017">
+      </div>
+      <div class="form-group2">
+        <label>End Date <span class="primary-color">*</span></label>
+        <input type="email" name="" id="datepicker2" placeholder="eg: 20-12-2019">
+      </div>
+    </div>
 
-     
+    <div class="form-row">
+      <div class="form-group">
+        <label>Responsibilities <span class="primary-color">*</span></label>
+        <textarea rows="5" name="" placeholder="eg: Design of flyers and banners ..."></textarea>
+      </div>
+      <div class="form-group2">
+        <label>Achievements <span class="primary-color">*</span></label>
+        <textarea rows="5" name="" placeholder="eg: Led three creative designers to develop production and graphic materials ..."></textarea>
+      </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/>
+    
 
    </div>
 
@@ -147,9 +200,24 @@
 
 
 
-<script>
-  CKEDITOR.replace( 'editor1' );
+    <div class="bottom-buttons-group">
+      <a href="summary.html"><button class="next-button">< &nbsp; BACK</button></a>
+      <a href="education.html">&nbsp;&nbsp; <button class="next-button">NEXT &nbsp; ></button></a>
+    </div>
+    <br/>
+
+
+
+
+
+<script type="text/javascript">
+  function editFunction() {
+    var newFunction = prompt("Edit function", "Graphic designer at Bunisha");
+  }
 </script>
+
+
+
 
 
 

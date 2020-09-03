@@ -33,7 +33,22 @@
   <link href="custom.css" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker1" ).datepicker();
+  } );
+  </script>
+  <script>
+  $( function() {
+    $( "#datepicker2" ).datepicker();
+  } );
+  </script>
  </head>
 
  <body> 
@@ -86,17 +101,17 @@
 
 
     <div class="row center">
-                <h2>Let employers know a little bit about yourself.</h2>
-                <p class="subtitle">Provide details about your career history.</p>
+                <h2>Do you wish to add extra attachments?</h2>
+                <p class="subtitle">These may include award certificactes & recommendations letter</p>
                     <!-- progressbar -->
                     <ul id="progressbar">
                         <li class="active" id="account"><strong>Personal Information</strong></li>
                         <li class="active" id="personal"><strong>Summary</strong></li>
-                        <li id="payment"><strong>Work Experience</strong></li>
-                        <li id="education"><strong>Education</strong></li>
-                        <li id="skills"><strong>Skills</strong></li>
-                        <li id="reference"><strong>Reference</strong></li>
-                        <li id="more-info"><strong>Additional Information</strong></li>
+                        <li class="active" id="payment"><strong>Work Experience</strong></li>
+                        <li class="active" id="education"><strong>Education</strong></li>
+                        <li class="active" id="skills"><strong>Skills</strong></li>
+                        <li class="active" id="reference"><strong>Reference</strong></li>
+                        <li class="active" id="more-info"><strong>Additional Information</strong></li>
                         <li id="confirm"><strong>Templates</strong></li>
                     </ul>
 
@@ -114,42 +129,54 @@
 
 
 
+    <div class="single-field">
+      <div class="function">
+        <div class="function-title">Name Of Attachment</div>
+        <!-- <div class="function-company">Company Name </div> -->
+      </div>
+      <div class="save-button" onclick="editFunction()">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i> &nbsp; 
+        Save
+      </div>
+    </div>
+    <br/>
 
-
-
-   <div class="cv-form">
+   <div class="cv-form form-card">
 
     <div class="form-row">
-      <div class="form-group-single">
-        <label>Professionnal Summary</label>
-        <textarea type="text" name="editor1" rows="10" placeholder="eg: I am a creative and multi-talented designer with  6 years of experience"></textarea>
+      <div class="form-group">
+        <label>Name Of Attachment <span class="primary-color">*</span></label>
+        <input type="text" name="" placeholder="eg: Programmer">
       </div>
-
-      <br/>
-
-      <div class="button-group">
-      <a href="start_cv_building.html"><button class="next-button">< &nbsp; BACK</button></a>
-      <a href="work-experience.html">&nbsp;&nbsp; <button class="next-button">NEXT &nbsp; ></button></a>
-    </div>
-    <br/><Br/>
-
-    </div>
-
-
+      <div class="form-group2">
+        <label>File <span class="primary-color">*</span></label>
+        <input type="file" name="">
+      </div>
+    </div>    
      
 
    </div>
 
  </div>
 
+ <div class="button-group">
+      <a href="reference.html"><button class="next-button">< &nbsp; BACK</button></a>
+      <a href="#">&nbsp;&nbsp; <button class="next-button">NEXT &nbsp; ></button></a>
+    </div>
+    <br/><Br/>
 
 
 
 
 
-<script>
-  CKEDITOR.replace( 'editor1' );
+<script type="text/javascript">
+  function editFunction() {
+    var newFunction = prompt("Edit function", "Graphic designer at Bunisha");
+  }
 </script>
+
+
+
 
 
 
