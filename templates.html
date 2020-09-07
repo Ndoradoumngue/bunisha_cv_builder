@@ -33,6 +33,10 @@
   <link href="custom.css" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
   <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -49,6 +53,7 @@
     $( "#datepicker2" ).datepicker();
   } );
   </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
  </head>
 
  <body> 
@@ -112,7 +117,7 @@
                         <li class="active" id="skills"><strong>Skills</strong></li>
                         <li class="active" id="reference"><strong>Reference</strong></li>
                         <li class="active" id="more-info"><strong>Additional Information</strong></li>
-                        <li id="confirm"><strong>Templates</strong></li>
+                        <li class="active" id="confirm"><strong>Templates</strong></li>
                     </ul>
 
 
@@ -127,44 +132,57 @@
 
 
 
-
-
-    <div class="single-field">
-      <div class="function">
-        <div class="function-title">Name Of Attachment</div>
-        <!-- <div class="function-company">Company Name </div> -->
-      </div>
-      <div class="save-button" onclick="editFunction()">
-        <i class="fa fa-arrow-down" aria-hidden="true"></i> &nbsp; 
-        Save
+   <div class="form-row">
+      <div class="search-form-group">
+        <i class="fa fa-search"></i> &nbsp; 
+        <input type="text" name="" placeholder="Search by role">
       </div>
     </div>
 
-   <div class="cv-form form-card">
-
-    <div class="form-row">
-      <div class="form-group">
-        <label>Name Of Attachment <span class="primary-color">*</span></label>
-        <input type="text" name="" placeholder="eg: Programmer">
-      </div>
-      <div class="form-group2">
-        <!-- <label>File <span class="primary-color">*</span></label> -->
-        <br/>
-        <div class="photo-file-group">
-          <!-- <input type="file" name=""> -->
-          <i class="fa fa-user photo-file-icon"></i> &nbsp;&nbsp; <span>Choose File</span>
-        </div>
-      </div>
-    </div>    
-     
-
-   </div>
-
  </div>
 
+
+
+
+
+
+
+
+    <div id="owl-demo" class="owl-carousel owl-theme brands_slider_container">
+      <div class="item"><h1><img src="diamond-template.jpg" alt=""></h1></div>
+      <div class="item"><h1><img src="creative-vibe-template.jpg" alt=""></h1></div>
+      <div class="item"><h1><img src="crisp-template.jpg" alt=""></h1></div>
+      <div class="item"><h1><img src="cool-orange.jpg" alt=""></h1></div>
+      <div class="item"><h1><img src="the-vortex.jpg" alt=""></h1></div>
+    </div>
+     
+    <!-- <div class="customNavigation">
+      <a class="btn prev">Previous</a>
+      <a class="btn next">Next</a>
+      <a class="btn play">Autoplay</a>
+      <a class="btn stop">Stop</a>
+    </div> -->
+
+
+
+    <div class="brands_nav brands_prev"><i class="fa fa-chevron-left"></i></div>
+    <div class="brands_nav brands_next"><i class="fa fa-chevron-right"></i></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br/>
  <div class="button-group">
-      <a href="reference.html"><button class="next-button">< &nbsp; BACK</button></a>
-      <a href="templates.html">&nbsp;&nbsp; <button class="next-button">NEXT &nbsp; ></button></a>
+      <a href="more-info.html"><button class="next-button">< &nbsp; BACK</button></a>
+      <a href="">&nbsp;&nbsp; <button class="next-button">FINISH &nbsp; ></button></a>
     </div>
     <br/><Br/>
 
@@ -178,9 +196,51 @@
   }
 </script>
 
+<style type="text/css">
+  input[type=text] {
+    min-width: 80% !important;
+  }
+  input:focus, textarea:focus, select:focus{
+        outline: none !important;
+    }
+</style>
 
 
 
+<script type="text/javascript">
+
+
+    $(document).ready(function() {
+     
+      var owl = $("#owl-demo");
+     
+      owl.owlCarousel({
+          items : 4, //10 items above 1000px browser width
+          loop:true,
+          nav:false,
+          dots:false,
+          itemsDesktop : [1000,4], //5 items between 1000px and 901px
+          itemsDesktopSmall : [900,3], // betweem 900px and 601px
+          itemsTablet: [600,2], //2 items between 600 and 0
+          itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+      });
+     
+      // Custom Navigation Events
+
+      $(".brands_next").click(function(){
+        alert("The paragraph was clicked.");
+        owl.trigger('owl.next');
+      })
+
+      $(".brands_prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+      
+     
+    });
+
+
+</script>
 
 
 </body> 

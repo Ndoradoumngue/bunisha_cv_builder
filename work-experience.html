@@ -51,7 +51,7 @@
   </script>
  </head>
 
- <body> 
+ <body onload="hideEditForm(); initialDisplays(); mainInitialDisplays();"> 
 
 
 
@@ -131,7 +131,7 @@
 
 
     <div class="single-field">
-      <div class="function">
+      <div class="function" onclick="editFunction()">
         <div class="function-title">Creative Designer</div>
         <div class="function-company">Bunisha Limited</div>
       </div>
@@ -140,7 +140,76 @@
         Edit
       </div>
     </div>
+    <div class="cv-form form-card" id="edit-form">
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Job Title <span class="primary-color">*</span></label>
+        <input type="text" name="" value="Creative Designer">
+      </div>
+      <div class="form-group2">
+        <label>Employer <span class="primary-color">*</span></label>
+        <input type="text" name="" value="Bunisha Limited">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Start Date <span class="primary-color">*</span></label>
+        <input type="text" name="" id="datepicker1" value="07/05/2019">
+      </div>
+      <div class="to-date-form-group" id="ongoing-education">
+        <label>End Date <span class="primary-color">*</span></label>
+        <br/>
+        <div class="end-date">
+          <input type="email" name="disabledToDate" placeholder="eg: 20-12-2019">
+        </div>
+
+        <label class="ungoing-checkbox">Ongoing &nbsp;
+          <input type="checkbox" checked="checked" onclick="isPassedEducation()">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div class="to-date-form-group" id="passed-education">
+        <label>End Date <span class="primary-color">*</span></label>
+        <br/>
+        <div class="end-date">
+          <input type="email" name="enddate" id="datepicker2" placeholder="eg: 20-12-2019">
+        </div>
+
+        <label class="ungoing-checkbox">Ongoing &nbsp;
+          <input type="checkbox" onclick="isOngoingEducation()">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Responsibilities <span class="primary-color">*</span></label>
+        <textarea rows="5" name="">Design of flyers and banners</textarea>
+      </div>
+      <div class="form-group2">
+        <label>Achievements <span class="primary-color">*</span></label>
+        <textarea rows="5" name="">Led three creative designers to develop production and graphic materials</textarea>
+      </div>
+    </div>
+
+    <div class="save-edit-button-group">
+      <div class="save-edit-button" onclick="hideEditForm()">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i> &nbsp; 
+        Save Update
+      </div>
+    </div>
+
+
     <br/>
+    
+
+   </div>
+   <br/>
+
 
     <div class="single-field">
       <div class="function">
@@ -152,7 +221,7 @@
         Save
       </div>
     </div>
-    <br/>
+
 
    <div class="cv-form form-card">
 
@@ -172,9 +241,30 @@
         <label>Start Date <span class="primary-color">*</span></label>
         <input type="text" name="" id="datepicker1" placeholder="eg: 20-12-2017">
       </div>
-      <div class="form-group2">
+      <div class="to-date-form-group" id="main-ongoing-education">
         <label>End Date <span class="primary-color">*</span></label>
-        <input type="email" name="" id="datepicker2" placeholder="eg: 20-12-2019">
+        <br/>
+        <div class="end-date">
+          <input type="email" name="disabledToDate" placeholder="eg: 20-12-2019">
+        </div>
+
+        <label class="ungoing-checkbox">Ongoing &nbsp;
+          <input type="checkbox" checked="checked" onclick="mainIsPassedEducation()">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div class="to-date-form-group" id="main-passed-education">
+        <label>End Date <span class="primary-color">*</span></label>
+        <br/>
+        <div class="end-date">
+          <input type="email" name="enddate" id="datepicker2" placeholder="eg: 20-12-2019">
+        </div>
+
+        <label class="ungoing-checkbox">Ongoing &nbsp;
+          <input type="checkbox" onclick="mainIsOngoingEducation()">
+          <span class="checkmark"></span>
+        </label>
       </div>
     </div>
 
@@ -212,8 +302,43 @@
 
 <script type="text/javascript">
   function editFunction() {
-    var newFunction = prompt("Edit function", "Graphic designer at Bunisha");
+    document.getElementById('edit-form').style.display = 'block';
   }
+
+  function hideEditForm() {
+    document.getElementById('edit-form').style.display = 'none';
+  }
+
+  function initialDisplays() {
+    document.getElementById('ongoing-education').style.display = 'none';
+    document.getElementById('passed-education').style.display = 'block';
+  }
+
+  function isPassedEducation() {
+    document.getElementById('ongoing-education').style.display = 'none';
+    document.getElementById('passed-education').style.display = 'block';
+  }
+
+  function isOngoingEducation() {
+    document.getElementById('ongoing-education').style.display = 'block';
+    document.getElementById('passed-education').style.display = 'none';
+  }
+
+  function mainInitialDisplays() {
+    document.getElementById('main-ongoing-education').style.display = 'none';
+    document.getElementById('main-passed-education').style.display = 'block';
+  }
+
+  function mainIsPassedEducation() {
+    document.getElementById('main-ongoing-education').style.display = 'none';
+    document.getElementById('main-passed-education').style.display = 'block';
+  }
+
+  function mainIsOngoingEducation() {
+    document.getElementById('main-ongoing-education').style.display = 'block';
+    document.getElementById('main-passed-education').style.display = 'none';
+  }
+
 </script>
 
 

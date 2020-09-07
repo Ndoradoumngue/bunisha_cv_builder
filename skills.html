@@ -51,7 +51,7 @@
   </script>
  </head>
 
- <body> 
+ <body onload="initalDisplays()"> 
 
 
 
@@ -139,18 +139,64 @@
         Save
       </div>
     </div>
-    <div class="cv-form form-card" style="margin-top: 5px !important;">
+    <div class="cv-form form-card">
 
     <div class="form-row">
       <div class="form-group">
         <label>Skill <span class="primary-color">*</span></label>
         <input type="text" name="" placeholder="eg: Adobe Photoshop">
       </div>
-      <div class="form-group2">
-        <label>Strength -- <span class="second-color">Experienced</span></label>
-        <div id="strengthsbar">
+      <div class="form-group2" id="basic-skilled">
+        <label>Strength -- <span class="second-color">Basic</span></label>
+        <br/>
+        <!-- <div id="strengthsbar">
           <div></div>
-        </div>
+        </div> -->
+
+        <span class="full-strength start-strength" title="Basic" onclick="basicSkilled()">Basic</span>
+        <span class="empty-strength" title="Intermediate" onclick="intermediateSkilled()">Intermediate</span>
+        <span class="empty-strength" title="Experienced" onclick="experiencedSkilled()">Experienced</span>
+        <span class="empty-strength end-strength" title="Expert" onclick="expertSkilled()">Expert</span>        
+
+      </div>
+      <div class="form-group2" id="intermediate-skilled">
+        <label>Strength -- <span class="second-color">Intermediate</span></label>
+        <br/>
+        <!-- <div id="strengthsbar">
+          <div></div>
+        </div> -->
+
+        <span class="full-strength start-strength" title="Basic" onclick="basicSkilled()">Basic</span>
+        <span class="full-strength" title="Intermediate" onclick="intermediateSkilled()">Intermediate</span>
+        <span class="empty-strength" title="Experienced" onclick="experiencedSkilled()">Experienced</span>
+        <span class="empty-strength end-strength" title="Expert" onclick="expertSkilled()">Expert</span>        
+
+      </div>
+      <div class="form-group2" id="experienced-skilled">
+        <label>Strength -- <span class="second-color">Experienced</span></label>
+        <br/>
+        <!-- <div id="strengthsbar">
+          <div></div>
+        </div> -->
+
+        <span class="full-strength start-strength" title="Basic" onclick="basicSkilled()">Basic</span>
+        <span class="full-strength" title="Intermediate" onclick="intermediateSkilled()">Intermediate</span>
+        <span class="full-strength" title="Experienced" onclick="experiencedSkilled()">Experienced</span>
+        <span class="empty-strength end-strength" title="Expert" onclick="expertSkilled()">Expert</span>        
+
+      </div>
+      <div class="form-group2" id="expert-skilled">
+        <label>Strength -- <span class="second-color">Expert</span></label>
+        <br/>
+        <!-- <div id="strengthsbar">
+          <div></div>
+        </div> -->
+
+        <span class="full-strength start-strength" title="Basic" onclick="basicSkilled()">Basic</span>
+        <span class="full-strength" title="Intermediate" onclick="intermediateSkilled()">Intermediate</span>
+        <span class="full-strength" title="Experienced" onclick="experiencedSkilled()">Experienced</span>
+        <span class="full-strength end-strength" title="Expert" onclick="expertSkilled()">Expert</span>        
+
       </div>
     </div>
 
@@ -217,6 +263,42 @@
   function editFunction() {
     var newFunction = prompt("Edit function", "Graphic designer at Bunisha");
   }
+
+  function initalDisplays() {
+    document.getElementById('basic-skilled').style.display = 'block';
+    document.getElementById('intermediate-skilled').style.display = 'none';
+    document.getElementById('experienced-skilled').style.display = 'none';
+    document.getElementById('expert-skilled').style.display = 'none';
+  }
+
+  function basicSkilled() {
+    document.getElementById('basic-skilled').style.display = 'block';
+    document.getElementById('intermediate-skilled').style.display = 'none';
+    document.getElementById('experienced-skilled').style.display = 'none';
+    document.getElementById('expert-skilled').style.display = 'none';
+  }
+
+  function intermediateSkilled() {
+    document.getElementById('basic-skilled').style.display = 'none';
+    document.getElementById('intermediate-skilled').style.display = 'block';
+    document.getElementById('experienced-skilled').style.display = 'none';
+    document.getElementById('expert-skilled').style.display = 'none';
+  }
+
+  function experiencedSkilled() {
+    document.getElementById('basic-skilled').style.display = 'none';
+    document.getElementById('intermediate-skilled').style.display = 'none';
+    document.getElementById('experienced-skilled').style.display = 'block';
+    document.getElementById('expert-skilled').style.display = 'none';
+  }
+
+  function expertSkilled() {
+    document.getElementById('basic-skilled').style.display = 'none';
+    document.getElementById('intermediate-skilled').style.display = 'none';
+    document.getElementById('experienced-skilled').style.display = 'none';
+    document.getElementById('expert-skilled').style.display = 'block';
+  }
+
 </script>
 
 
