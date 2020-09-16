@@ -347,12 +347,12 @@ body
 }
 .end-date
 {
-    width: 80% !important;
+    width: 100% !important;
     float: left;
 }
 .ungoing-checkbox
 {
-    width: 10%;
+    width: 20%;
     float: right;
 }
 input[name=disabledToDate] {
@@ -463,11 +463,214 @@ input[name=disabledToDate] {
 
 
 
+.in-image
+{
+    width: 100% !important;
+    height: 500px !important;
+}
+.top-in-title
+{
+    margin-top: -250px !important;
+    text-align: center !important;
+    color: #fff !important;
+}
+.in-cv-body
+{
+    margin-top: 150px !important;
+}
+.customized
+{
+    float: left;
+    width: 40%;
+    text-align: center;
+}
+.in-title
+{
+    line-height: 1.8 !important;
+}
+.or
+{
+    float: left;
+    width: 20%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 50px !important;
+    font-size: 1.9rem !important;
+}
+.in-body
+{
+    line-height: 1.8 !important;
+    margin-top: 15px !important;
+}
+.existing
+{
+    float: right;
+    width: 40%;
+    text-align: center;
+}
+
+.get-started-button
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 35px;
+    padding-left: 35px;
+    background-color: #02aaf5;
+    color: #fff;
+    border: 2px solid #02aaf5;
+}
+.entry-title
+{
+    font-size: 2.5rem !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+.view-more-jobs-button
+{
+    text-align: center !important;
+}
+.view-more-jobs-button a
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 35px;
+    padding-left: 35px;
+    background-color: #151e27;
+    color: #fff;
+    border: 2px solid #02aaf5;
+}
+.job-description
+{
+    width: 60% !important;
+    float: left !important;
+    background-color: #ffffff !important;
+    padding: 20px !important;
+}
+.right-overview
+{
+    width: 38% !important;
+    float: right !important;
+}
+.job-overview
+{
+    background-color: #fff !important;
+    width: 100% !important;
+    padding: 20px !important;
+}
+.side-system-ad
+{
+    width: 100% !important;
+}
+.more-templates
+{
+    width: 60% !important;
+    float: left;
+}
+.cv-preview
+{
+    width: 38% !important;
+    float: right !important;
+}
+.first-templates-row
+{
+    width: 100% !important;
+}
+.first-templates-row img
+{
+    width: 30% !important;
+    margin-left: 2% !important;
+}
+.second-templates-row
+{
+    width: 100% !important;
+}
+.second-templates-row img
+{
+    width: 30% !important;
+    margin-left: 2% !important;
+}
+.cv-name-form
+{
+    float: right;
+    width: 37% !important;
+    margin-top: 20px !important;
+}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.finish-button
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 35px;
+    padding-left: 35px;
+    background-color: #02aaf5;
+    color: #fff;
+    border: 2px solid #02aaf5;
+}
+.cover-letter-form
+{
+    width: 60% !important;
+    float: right !important;
+}
+.cover-letters-templates
+{
+    width: 38% !important;
+    float: left;
+}
+.cover-letters-templates img
+{
+    width: 40% !important;
+    margin-left: 5% !important;
+    float: left;
+}
+.cover-letter textarea
+{
+    height: 600px !important;
+}
+
+
+
+.cover-letter-search-form-group
+{
+    width: 90%;
+    float: left;
+    border: 1px solid #838182;
+    background-color: #fff !important;
+}
+.cover-letter-search-form-group i
+{
+    width: 4% !important;
+    float: left !important;
+    padding: 10px;
+}
+.cover-letter-search-form-group-input
+{
+    background-color: transparent !important;
+    border: 2px solid transparent !important;
+    min-width: 92% !important;
+    max-width: 92% !important;
+    float: right !important;
+    padding-left: 1px !important; 
+}
 
 
 

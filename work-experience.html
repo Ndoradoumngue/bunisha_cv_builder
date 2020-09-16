@@ -32,6 +32,7 @@
   <link href="app.css" rel="stylesheet"> 
   <link href="custom.css" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
@@ -188,11 +189,11 @@
     <div class="form-row">
       <div class="form-group">
         <label>Responsibilities <span class="primary-color">*</span></label>
-        <textarea rows="5" name="">Design of flyers and banners</textarea>
+        <textarea rows="5" name="editor3">Design of flyers and banners</textarea>
       </div>
       <div class="form-group2">
         <label>Achievements <span class="primary-color">*</span></label>
-        <textarea rows="5" name="">Led three creative designers to develop production and graphic materials</textarea>
+        <textarea rows="5" name="editor4">Led three creative designers to develop production and graphic materials</textarea>
       </div>
     </div>
 
@@ -243,42 +244,42 @@
       </div>
       <div class="to-date-form-group" id="main-ongoing-education">
         <label>End Date <span class="primary-color">*</span></label>
-        <br/>
+        <label class="ungoing-checkbox">Ongoing &nbsp;
+          <input type="checkbox" onclick="mainIsPassedEducation()">
+          <span class="checkmark"></span>
+        </label>
         <div class="end-date">
           <input type="email" name="disabledToDate" placeholder="eg: 20-12-2019">
         </div>
 
-        <label class="ungoing-checkbox">Ongoing &nbsp;
-          <input type="checkbox" checked="checked" onclick="mainIsPassedEducation()">
-          <span class="checkmark"></span>
-        </label>
+        
       </div>
 
       <div class="to-date-form-group" id="main-passed-education">
         <label>End Date <span class="primary-color">*</span></label>
-        <br/>
+        <label class="ungoing-checkbox">Ongoing &nbsp;
+          <input type="checkbox" checked="checked" onclick="mainIsOngoingEducation()">
+          <span class="checkmark"></span>
+        </label>
         <div class="end-date">
           <input type="email" name="enddate" id="datepicker2" placeholder="eg: 20-12-2019">
         </div>
 
-        <label class="ungoing-checkbox">Ongoing &nbsp;
-          <input type="checkbox" onclick="mainIsOngoingEducation()">
-          <span class="checkmark"></span>
-        </label>
+        
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
         <label>Responsibilities <span class="primary-color">*</span></label>
-        <textarea rows="5" name="" placeholder="eg: Design of flyers and banners ..."></textarea>
+        <textarea rows="5" name="editor1" placeholder="eg: Design of flyers and banners ..."></textarea>
       </div>
       <div class="form-group2">
         <label>Achievements <span class="primary-color">*</span></label>
-        <textarea rows="5" name="" placeholder="eg: Led three creative designers to develop production and graphic materials ..."></textarea>
+        <textarea rows="5" name="editor2" placeholder="eg: Led three creative designers to develop production and graphic materials ..."></textarea>
       </div>
     </div>
-    <br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     
 
    </div>
@@ -297,7 +298,18 @@
     <br/>
 
 
-
+<script>
+  CKEDITOR.replace( 'editor1' );
+</script>
+<script>
+  CKEDITOR.replace( 'editor2' );
+</script>
+<script>
+  CKEDITOR.replace( 'editor3' );
+</script>
+<script>
+  CKEDITOR.replace( 'editor4' );
+</script>
 
 
 <script type="text/javascript">
